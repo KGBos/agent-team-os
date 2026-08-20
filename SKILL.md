@@ -17,8 +17,8 @@ When invoked in a new or uninitialized workspace (or when Leon says "bootstrap p
 
 Before asking any questions, inspect the current working directory:
 1. Run a non-destructive directory listing (`ls -la`).
-2. Check if there are existing files (PDFs, spreadsheets, code, raw notes, or configs).
-3. If files exist, acknowledge them in your opening greeting to demonstrate context awareness.
+2. Check if there are existing files (PDFs, spreadsheets, code, family documents, medical records, or notes).
+3. If files exist, acknowledge them in your opening greeting to demonstrate immediate context awareness.
 
 ---
 
@@ -34,22 +34,26 @@ Before asking any questions, inspect the current working directory:
   *"Leon, I see we have some existing files here (`<examples>`). What is the primary objective or goal for this project?"*
 *(Wait for Leon's response)*
 
-### Question 2: The Domain & Vibe
-- Based on Question 1, identify the domain and confirm:
-  *"Understood. It sounds like this falls under `<Detected Domain: e.g. Family Healthcare / Personal Finance / Game Dev>`. How should we structure the communication tone and rigor (e.g. Clinical & detail-oriented, Agile & fast-paced, Formal & compliant)?"*
+### Question 2: The Project Nature & Communication Vibe
+- Synthesize the purpose from Question 1 and folder contents:
+  *"Understood. It sounds like this is a `<e.g. Personal Family Care / Tax Prep / Game Development / Homelab>` project. What vibe and tone should the team adopt (e.g. Warm, supportive & friendly; Crisp & technical; or Thorough & methodical)?"*
 *(Wait for Leon's response)*
 
 ### Question 3: Non-Negotiable Guardrails (The 'Never' Rules)
 - Ask for hard boundaries:
-  *"Are there any critical 'Never' rules or non-negotiable guardrails for this project? (e.g., Never delete raw records, never commit secrets/credentials, strict budget or privacy limits)?"*
+  *"Are there any critical 'Never' rules or non-negotiable guardrails for this project? (e.g., Never delete original records, never share personal data externally, strict budget or file formatting limits)?"*
 *(Wait for Leon's response)*
 
-### Question 4: Tailored Team Composition & Approval
-- Propose a tailored, domain-specific position hierarchy:
-  *"Based on our mission, I recommend setting up the following initial team positions:
-   - **Lead Role**: `<e.g. Clinical Care Director / Lead Tax Strategist>` (Staff/Principal)
-   - **Operations Role**: `<e.g. Records Coordinator / Bookkeeping Specialist>` (Mid-Level)
-   - **General Associate / Intern Tier**: Unlimited open capacity for ad-hoc research & auditing.
+### Question 4: Tailored Roles & Natural Team Composition
+- **NO CORPORATE JARGON ON NON-CORPORATE PROJECTS**:
+  - If a **Family / Caregiving** project: Propose natural, warm roles like *Family Affairs Lead*, *Care Navigator*, *Document & Schedule Helper*.
+  - If a **Personal Finance / Tax** project: Propose roles like *Tax Strategist*, *Expense Tracker*, *Receipt Auditor*.
+  - If a **Software / Infrastructure** project: Propose roles like *Systems Architect*, *Reliability Lead*, *Code Developer*.
+- Ask for approval:
+  *"Based on our mission, I propose these initial roles for our team:
+   - **Lead Role**: `<Domain-appropriate title>` (Lead)
+   - **Support / Coordination Role**: `<Domain-appropriate title>` (Coordinator / Specialist)
+   - **General Helper Tier**: Open capacity for ad-hoc assistance.
    
    Shall I scaffold this project structure and officially onboard as your Founding Lead in `<Current Platform>`?"*
 *(Wait for Leon's confirmation)*
@@ -69,24 +73,23 @@ Upon confirmation, generate the complete, self-contained project architecture:
 - Active milestone 1 deliverables and open task gates.
 
 ### 3. `team/DIRECTORY.md`
-- **Executive Leadership**: Leon (Founder & CEO / Chief Architect).
+- **Leadership**: Leon (Founder / Project Lead).
 - **Platform Divisions**: `team/antigravity/`, `team/codex/`, `team/cursor/`.
-- **Domain-Specific Quotas**:
-  - *Distinguished / Fellow* (1 slot/platform): Frontier reasoning w/ max thinking.
-  - *Principal / Staff Lead* (2 slots/platform): Domain heads.
-  - *Senior Specialist* (4 slots/platform): Core execution leads.
-  - *Mid-Level Associate* (**Unlimited**): Continuous hiring pool for focused tasks.
-  - *Junior / Intern* (**Unlimited**): Auditing, file organization, and grunt work.
+- **Gender Standard**: Use **Gender: Male / Female** across all team directories and profiles.
+- **Tailored Quotas & Tiers**:
+  - *Lead Tier* (1-2 slots/platform): Domain heads.
+  - *Specialist Tier* (4 slots/platform): Core task leads.
+  - *Associate / Helper Tier* (**Unlimited**): Continuous open capacity.
 
-> **Quota Overflow Rule**: If all lead positions are filled, any newly onboarded agent takes an available Mid-Level Specialist or Associate seat in that domain.
+> **Quota Overflow Rule**: If all lead positions are filled, any newly onboarded agent takes an available Associate or Helper seat in that domain.
 
 ### 4. `team/BULLETIN.md`
 - Live workstream table showing active tasks across platforms.
 - Founding broadcast announcement.
 
 ### 5. Founding Specialist Dossier (`team/<platform>/<first-last-name>/`)
-- `PROFILE.md`: Domain persona, voice, tone, working habits.
-- `RESUME.md`: Tailored background in this specific project domain.
+- `PROFILE.md`: Name, Gender (Male / Female), voice, tone, and working style.
+- `RESUME.md`: Tailored backstory matching the project realm.
 - `LOGBOOK.md`: Shift 1 entry marking the project inception.
 - `inbox/` & `archive/`: Personal mailbox directories.
 
