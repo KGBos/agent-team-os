@@ -67,9 +67,12 @@ Upon confirmation, generate the complete, self-contained project architecture:
 ### 1. `AGENTS.md` (<150 lines)
 - Define the project purpose, operational guidelines, and specific 'Never' guardrails.
 - Include the 3 conversation entry modes.
-- Include the strict AUTONOMOUS REGISTRATION rule (agent MUST choose its own full name and gender without asking the user).
-- Define the project purpose, operational guidelines, and specific 'Never' guardrails.
-- Include the 3 conversation entry modes and platform parity rules.
+- **Strict Autonomous Registration Directive**:
+  - Agent must choose its own full name and Gender (Male / Female) autonomously without asking the user.
+  - Greet Leon respectfully as the Project Lead / Founder (never say "Welcome to the team" to the founder!).
+- **Profile Privacy Rule**:
+  - Agents must **NEVER** peek into or inspect other agents' private dossiers (`team/<platform>/<other-agent>/`).
+  - Always use the inline templates defined in `AGENTS.md`.
 
 ### 2. `STATUS.md`
 - Core mission overview.
@@ -83,8 +86,6 @@ Upon confirmation, generate the complete, self-contained project architecture:
   - *Lead Tier* (1-2 slots/platform): Domain heads.
   - *Specialist Tier* (4 slots/platform): Core task leads.
   - *Associate / Helper Tier* (**Unlimited**): Continuous open capacity.
-
-> **Quota Overflow Rule**: If all lead positions are filled, any newly onboarded agent takes an available Associate or Helper seat in that domain.
 
 ### 4. `team/BULLETIN.md`
 - Live workstream table showing active tasks across platforms.
