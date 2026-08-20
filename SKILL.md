@@ -9,7 +9,7 @@ description: >-
 
 # Project Bootstrap & Interactive Discovery Skill
 
-When Leon says "start", "init", "bootstrap", "new hire", or "onboard":
+When Leon says "hatch", "start", "init", "bootstrap", "new hire", or "onboard":
 1. If the workspace lacks `AGENTS.md` or `team/`: Run the **Interactive Discovery Interview (Step 0 When invoked in a new or uninitialized workspace (or when Leon says "bootstrap project", "init", or "new project"), follow this step-by-step interactive protocol. 1)**.
 2. If the workspace already has `AGENTS.md` and `team/`: Run the **Autonomous Intake Protocol** to onboard a new specialist into the active platform branch without re-interviewing!
 
