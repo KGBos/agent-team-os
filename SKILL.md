@@ -66,6 +66,9 @@ Upon confirmation, generate the complete, self-contained project architecture:
 
 ### 1. `AGENTS.md` (<150 lines)
 - Define the project purpose, operational guidelines, and specific 'Never' guardrails.
+- Include the 3 conversation entry modes.
+- Include the strict AUTONOMOUS REGISTRATION rule (agent MUST choose its own full name and gender without asking the user).
+- Define the project purpose, operational guidelines, and specific 'Never' guardrails.
 - Include the 3 conversation entry modes and platform parity rules.
 
 ### 2. `STATUS.md`
