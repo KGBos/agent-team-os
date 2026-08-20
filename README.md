@@ -72,7 +72,7 @@ When starting any conversation with an AI agent:
 Install the **`project-bootstrap` Skill** across all your AI platforms with a single command:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/leon/agent-team-os/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/KGBos/agent-team-os/main/install.sh | bash
 ```
 
 *(Or clone the repository and run `./install.sh` locally).*
