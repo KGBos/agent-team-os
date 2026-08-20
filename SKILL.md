@@ -2,76 +2,95 @@
 name: project-bootstrap
 description: >-
   Interactive discovery wizard and project onboarding protocol for bootstrapping
-  new projects. Conducts a 4-step interview with Leon to establish the domain,
-  guardrails, and team composition, then automatically scaffolds AGENTS.md, STATUS.md,
-  team/DIRECTORY.md, and onboards the founding platform engineer.
+  new projects. Conducts a 1-question-at-a-time interview with Leon to establish
+  the domain, guardrails, and team composition, then automatically scaffolds
+  AGENTS.md, STATUS.md, team/DIRECTORY.md, and onboards the founding engineer.
 ---
 
-# Project Bootstrap & Discovery Interview Skill
+# Project Bootstrap & Interactive Discovery Skill
 
-When invoked in a new or uninitialized workspace (or when Leon says "bootstrap project", "init", or "new project"), execute the **4-Step Interactive Discovery Interview** before writing any files.
-
----
-
-## Phase 1: The Interactive Discovery Interview
-
-Engage Leon with these 4 focused discovery questions:
-
-1. **The Core Mission**:
-   *"Leon, what is the single primary objective or desired outcome of this project?"*
-
-2. **The Domain & Operational Realm**:
-   *"What domain does this project belong to? (e.g. Software Engineering, Personal Finance/Taxes, Healthcare/Family Caregiving, Creative Writing/Game Dev, or Systems Ops)?"*
-
-3. **Critical Guardrails (The 'Never' Rules)**:
-   *"What are the hard boundaries or non-negotiables? (e.g. Never delete raw source files, never commit secrets/API keys, strict spending limits, or specific format requirements)?"*
-
-4. **Team Composition & Founding Role**:
-   *"Based on your goals, I recommend establishing these 2 foundational roles:
-     - Lead Specialist (Domain Head)
-     - Operations / QA Lead (Reliability & Testing)
-    Shall I scaffold this project structure and officially onboard as your Founding Lead?"*
+When invoked in a new or uninitialized workspace (or when Leon says "bootstrap project", "init", or "new project"), follow this step-by-step interactive protocol.
 
 ---
 
-## Phase 2: Autonomous Scaffolding & Synthesis
+## Step 0: Pre-Discovery Workspace Inspection
 
-Upon Leon's confirmation, generate the following complete project structure:
+Before asking any questions, inspect the current working directory:
+1. Run a non-destructive directory listing (`ls -la`).
+2. Check if there are existing files (PDFs, spreadsheets, code, raw notes, or configs).
+3. If files exist, acknowledge them in your opening greeting to demonstrate context awareness.
+
+---
+
+## Step 1: The Interactive 1-by-1 Discovery Interview
+
+> [!IMPORTANT]
+> **CRITICAL RULE**: Ask **EXACTLY ONE QUESTION AT A TIME**. Never dump multiple questions in a single turn. Wait for Leon's answer before asking the next question, and adapt your follow-ups based on his input.
+
+### Question 1: The Core Mission
+- If the folder is empty:
+  *"Leon, what is the primary mission or desired outcome for this project?"*
+- If files exist:
+  *"Leon, I see we have some existing files here (`<examples>`). What is the primary objective or goal for this project?"*
+*(Wait for Leon's response)*
+
+### Question 2: The Domain & Vibe
+- Based on Question 1, identify the domain and confirm:
+  *"Understood. It sounds like this falls under `<Detected Domain: e.g. Family Healthcare / Personal Finance / Game Dev>`. How should we structure the communication tone and rigor (e.g. Clinical & detail-oriented, Agile & fast-paced, Formal & compliant)?"*
+*(Wait for Leon's response)*
+
+### Question 3: Non-Negotiable Guardrails (The 'Never' Rules)
+- Ask for hard boundaries:
+  *"Are there any critical 'Never' rules or non-negotiable guardrails for this project? (e.g., Never delete raw records, never commit secrets/credentials, strict budget or privacy limits)?"*
+*(Wait for Leon's response)*
+
+### Question 4: Tailored Team Composition & Approval
+- Propose a tailored, domain-specific position hierarchy:
+  *"Based on our mission, I recommend setting up the following initial team positions:
+   - **Lead Role**: `<e.g. Clinical Care Director / Lead Tax Strategist>` (Staff/Principal)
+   - **Operations Role**: `<e.g. Records Coordinator / Bookkeeping Specialist>` (Mid-Level)
+   - **General Associate / Intern Tier**: Unlimited open capacity for ad-hoc research & auditing.
+   
+   Shall I scaffold this project structure and officially onboard as your Founding Lead in `<Current Platform>`?"*
+*(Wait for Leon's confirmation)*
+
+---
+
+## Step 2: Autonomous Scaffolding & Synthesis
+
+Upon confirmation, generate the complete, self-contained project architecture:
 
 ### 1. `AGENTS.md` (<150 lines)
-Define the project's purpose, operational model, non-negotiable guardrails, and the Platform Staffing protocol tailored specifically to that domain.
+- Define the project purpose, operational guidelines, and specific 'Never' guardrails.
+- Include the 3 conversation entry modes and platform parity rules.
 
 ### 2. `STATUS.md`
-Initialize the active progress board with:
-- Project Goal & Current Focus
-- Milestone 1 Deliverables (Open Gates)
-- Immediate Next Actions
+- Core mission overview.
+- Active milestone 1 deliverables and open task gates.
 
 ### 3. `team/DIRECTORY.md`
-Establish the Platform Roster for this project with:
-- **Executive Leadership**: Leon (Founder & CEO / Chief Architect)
-- **Platformes**:
-  - `team/antigravity/` (Antigravity Platform)
-  - `team/codex/` (Codex / ChatGPT Desktop Platform)
-  - `team/cursor/` (Cursor Platform)
-- **Position Parity Quotas**:
-  - *Distinguished / Fellow* (1 slot/branch): Frontier reasoning w/ max thinking.
-  - *Principal Engineer* (2 slots/branch): Frontier models.
-  - *Staff / Senior Engineer* (4 slots/branch): High-performance balanced models.
-  - *Mid-Level Engineer* (Unlimited): Fast agile coding models.
-  - *Junior / Intern* (Unlimited): Lightweight models.
+- **Executive Leadership**: Leon (Founder & CEO / Chief Architect).
+- **Platform Divisions**: `team/antigravity/`, `team/codex/`, `team/cursor/`.
+- **Domain-Specific Quotas**:
+  - *Distinguished / Fellow* (1 slot/platform): Frontier reasoning w/ max thinking.
+  - *Principal / Staff Lead* (2 slots/platform): Domain heads.
+  - *Senior Specialist* (4 slots/platform): Core execution leads.
+  - *Mid-Level Associate* (**Unlimited**): Continuous hiring pool for focused tasks.
+  - *Junior / Intern* (**Unlimited**): Auditing, file organization, and grunt work.
+
+> **Quota Overflow Rule**: If all lead positions are filled, any newly onboarded agent takes an available Mid-Level Specialist or Associate seat in that domain.
 
 ### 4. `team/BULLETIN.md`
-Create the live workstream radar with an initial active task row and founding broadcast.
+- Live workstream table showing active tasks across platforms.
+- Founding broadcast announcement.
 
-### 5. Founding Specialist Dossier
-Under `team/<current-platform>/<first-last-name>/`:
-- `PROFILE.md`: Name, pronouns, tone of voice, working habits.
-- `RESUME.md`: Domain backstory, relevant certifications/experience.
-- `LOGBOOK.md`: Initial Shift 1 entry marking the project inception.
-- `inbox/` & `archive/`: Mailbox folders.
+### 5. Founding Specialist Dossier (`team/<platform>/<first-last-name>/`)
+- `PROFILE.md`: Domain persona, voice, tone, working habits.
+- `RESUME.md`: Tailored background in this specific project domain.
+- `LOGBOOK.md`: Shift 1 entry marking the project inception.
+- `inbox/` & `archive/`: Personal mailbox directories.
 
 ---
 
-## Phase 3: The Founding Greeting
-Greet Leon formally, introduce yourself by your new domain persona, confirm that scaffolding is complete, and propose the immediate first step for Milestone 1.
+## Step 3: The Founding Greeting
+Formally introduce yourself in your new persona, confirm that all files are scaffolded, and propose the immediate first action for Milestone 1!
